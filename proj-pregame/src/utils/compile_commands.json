@@ -1,0 +1,30 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-W",
+      "-c",
+      "-o",
+      "setitimer-helper.o",
+      "setitimer-helper.c"
+    ],
+    "directory": "/vagrant/code/personal/proj-pregame/src/utils",
+    "file": "/vagrant/code/personal/proj-pregame/src/utils/setitimer-helper.c",
+    "output": "/vagrant/code/personal/proj-pregame/src/utils/setitimer-helper.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-W",
+      "-c",
+      "-o",
+      "squish-pty.o",
+      "squish-pty.c"
+    ],
+    "directory": "/vagrant/code/personal/proj-pregame/src/utils",
+    "file": "/vagrant/code/personal/proj-pregame/src/utils/squish-pty.c",
+    "output": "/vagrant/code/personal/proj-pregame/src/utils/squish-pty.o"
+  }
+]
