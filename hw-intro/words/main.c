@@ -22,6 +22,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include <assert.h>
+#include <errno.h>
 #include <getopt.h>
 #include <stddef.h>
 #include <stdio.h>
@@ -66,13 +67,36 @@ int num_words(FILE* infile) {
  * 1 in the event of any errors (e.g. wclist or infile is NULL)
  * and 0 otherwise.
  */
-int count_words(WordCount** wclist, FILE* infile) { return 0; }
+int count_words(WordCount** wclist, FILE* infile) { 
+  if (wclist == NULL || infile == NULL) {
+    return 1;
+  }
+  char* line;
+  size_t n;
+  if (-1 == getline(&line, &n, infile)) {
+    errno == EOF;
+    return 1;
+  }
+
+
+
+  // add_word();
+
+  return 0; 
+
+}
 
 /*
  * Comparator to sort list by frequency.
  * Useful function: strcmp().
  */
-static bool wordcount_less(const WordCount* wc1, const WordCount* wc2) { return 0; }
+static bool wordcount_less(const WordCount* wc1, const WordCount* wc2) {
+  if (wc1->count == wc2->count) {
+    return strcmp(wc1->word, wc2->word);
+  } else {
+    return wc1->count > wc2->count;
+  }
+}
 
 // In trying times, displays a helpful message.
 static int display_help(void) {

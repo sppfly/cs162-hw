@@ -1,0 +1,32 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-Wall",
+      "-g3",
+      "wc_sort.o",
+      "-o",
+      "words",
+      "main.c"
+    ],
+    "directory": "/vagrant/code/personal/hw-intro/words",
+    "file": "/vagrant/code/personal/hw-intro/words/main.c",
+    "output": "/vagrant/code/personal/hw-intro/words/words"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-Wall",
+      "-g3",
+      "wc_sort.o",
+      "-o",
+      "words",
+      "word_count.c"
+    ],
+    "directory": "/vagrant/code/personal/hw-intro/words",
+    "file": "/vagrant/code/personal/hw-intro/words/word_count.c",
+    "output": "/vagrant/code/personal/hw-intro/words/words"
+  }
+]
